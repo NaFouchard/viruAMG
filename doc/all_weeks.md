@@ -395,7 +395,7 @@ To:  08 february 2026
 
 ---
 
-### Monday
+### Monday 26-02-02
 
 #### Completed
 
@@ -425,11 +425,44 @@ python3 functional_annotation.py --config config.yaml --gff $MPROK --phrogs $PHR
 
 ---
 
-### Tuesday
+### Tuesday 26-02-03
 
 #### Completed
 
-* 
+* Openning a new tree in the serv to organize my project "viruAMG" which is also available following this link : 
+https://github.com/NaFouchard/viruAMG.git
+
+* I organized it with the following tree according to B.batut (2016)
+```
+.
+├── bin
+│   ├── functional_annotation.py
+│   └── setup_databases.sh
+├── conf
+│   ├── config.yaml
+│   └── local_path.sh
+├── doc
+│   └── README.md
+├── exp
+├── raw
+│   └── descriptors
+│       ├── ko_list.gz
+│       ├── Pfam-A.clans.tsv.gz
+│       └── vog.annotations.tsv.gz
+├── results
+└── src
+    ├── 01_prokka-gv
+    ├── 02_annotate_virus.py
+    ├── 03_annotate_specialized.py
+    ├── 04_annotate_functional.py
+    ├── 05_merge_annotations_table.py
+    ├── 06_generate_gff.py
+    └── __pycache__
+        └── annotate_virus.cpython-37.pyc
+
+```
+* I've also created a script(local_paths) to create variables in order to facilitate the execution of functional_annotation.py, it integrate a function to both inspect the first line of the refering file and declare if the vaiable doesnt refer to a file
+
 
 #### In progress
 
@@ -437,11 +470,12 @@ python3 functional_annotation.py --config config.yaml --gff $MPROK --phrogs $PHR
 
 #### Discussion
 
-* 
+* Local_paths.sh construction isn't ideal, the best would be to have 2 independant scripts, the first one declaring variables and the second one verifying if they are viable.
+*  
 
 #### To do
 
-* 
+* Adjust the congi.yaml file to fit with my configuration (naotably for descriptor files)
 
 ---
 
